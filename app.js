@@ -4,6 +4,8 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.static(__dirname + '/public'));
+
 // [START hello_world]
 // Say hello!
 app.get('/', (req, res) => {
@@ -20,5 +22,17 @@ if (module === require.main) {
   });
   // [END server]
 }
+
+app.use('/login', function(req, res) {   // Allows access to login page
+    res.send('displaying login page');   // before access token check
+});
+
+app.use(function(req, res, next) {       // Catches access to all other pages
+    if(!req.session.accessToken) {       // requiring a valid access token
+        res.redirect('/login');
+    } else {
+        next();
+    }
+});
 
 module.exports = app;
