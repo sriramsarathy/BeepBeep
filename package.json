@@ -2,7 +2,10 @@
   "name": "nodejs-getting-started",
   "version": "1.0.0",
   "description": "End to end sample for running Node.js applications on Google Cloud Platform",
-  "repository": "https://github.com/sriramsarathy/BeepBeep",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sriramsarathy/BeepBeep.git"
+  },
   "private": true,
   "scripts": {
     "start": "node app.js",
@@ -12,22 +15,10 @@
   },
   "author": "Beep Beep",
   "contributors": [
-    {
-      "name": "Sriram Parthasarathi",
-      "email": "psriram26@gmail.com"
-    },
-    {
-      "name": "Sowmya Parthasarathi",
-      "email": "psowmya26@gmail.com"
-    },
-    {
-      "name": "Sreejha Venkatesan",
-      "email": "sreejhavenkat@gmail.com"
-    },
-    {
-      "name": "Deepak Sampathkumar",
-      "email": "sdeepaksai@gmail.com"
-    }
+    "Sriram Parthasarathi <psriram26@gmail.com>",
+    "Sowmya Parthasarathi <psowmya26@gmail.com>",
+    "Sreejha Venkatesan <sreejhavenkat@gmail.com>",
+    "Deepak Sampathkumar <sdeepaksai@gmail.com>"
   ],
   "cloud-repo-tools": {
     "requiresKeyFile": true,
@@ -62,5 +53,10 @@
   },
   "engines": {
     "node": "8.x.x"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/sriramsarathy/BeepBeep/issues"
+  },
+  "homepage": "https://github.com/sriramsarathy/BeepBeep#readme",
+  "main": "app.js"
 }
